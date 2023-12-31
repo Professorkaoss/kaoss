@@ -21,6 +21,9 @@
             color: #fff;
             font-family: 'Roboto', sans-serif;
             overflow: hidden;
+
+            /* Trippy styles */
+            filter: hue-rotate(180deg) saturate(200%) contrast(90%);
         }
 
         h1 {
@@ -28,6 +31,9 @@
             margin: 20px 0;
             font-family: 'Great Vibes', cursive;
             text-decoration: underline;
+
+            /* Trippy styles */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
         }
 
         a {
@@ -50,6 +56,9 @@
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 20px;
+
+            /* Trippy styles */
+            filter: brightness(120%) saturate(120%);
         }
 
         #interactive-section {
@@ -62,17 +71,17 @@
             text-decoration: underline;
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
             animation: pulse 2s infinite;
-        }
 
-        #interactive-section a:hover {
-            color: #ffcc00;
-            transform: scale(1.1);
-            animation: none;
+            /* Trippy styles */
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         }
 
         #bio-section {
             margin: 20px 0;
             text-align: center;
+
+            /* Trippy styles */
+            filter: invert(1);
         }
 
         @keyframes pulse {
@@ -83,6 +92,14 @@
     </style>
 </head>
 <body>
+    <!-- Biography Section -->
+    <div id="bio-section">
+        <h2>Biography</h2>
+        <p>Welcome to the whimsical world of Professor Kaoss, a creative mind fueled by a passion for crafting the trippiest content imaginable. Inspired by the surreal wonders of Adult Swim's "Off the Air" and the mesmerizing realms of psychedelia, Professor Kaoss sets out to bend reality and synchronize beats with cosmic pulses.</p>
+        <p>Embark on a journey where sonic alchemy meets visual wizardry, painting vibrant landscapes of sound and color. In this kaleidoscopic adventure, ordinary boundaries blur into the extraordinary.</p>
+        <p>Join the experience, where every note is a brushstroke, creating a canvas of consciousness. And remember, this entire journey was woven with the help of ChatGPT, a digital companion in the quest for creativity.</p>
+    </div>
+
     <!-- Headline -->
     <h1><a href="https://youtube.com/@Professor-kaoss?si=B3oAStpak1nE1h0m" target="_blank">Professor Kaoss</a></h1>
 
@@ -93,12 +110,6 @@
     <div id="interactive-section">
         <!-- Link to your favorite books -->
         <a href="https://myfavoritebooks.neocities.org/" target="_blank">Explore Kaoss's Bookshelf</a>
-    </div>
-
-    <!-- Biography Section (Placeholder) -->
-    <div id="bio-section">
-        <h2>Biography</h2>
-        <p>Coming soon...</p>
     </div>
 
     <!-- JavaScript to Load YouTube Playlist -->
