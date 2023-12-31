@@ -16,15 +16,25 @@
             min-height: 100vh;
             margin: 0;
             background: linear-gradient(45deg, #f06, #9f6);
-            color: #f06; /* Match the darker color of the gradient */
+            color: #9f6; /* Match the lighter color of the gradient */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow: hidden;
         }
 
         h1 {
             font-size: 3em; /* Larger font size */
-            margin-bottom: 20px;
+            margin: 10px 0; /* Adjusted margin */
             font-family: 'Fontdiner Swanky', cursive; /* Change to your preferred psychedelic font */
+        }
+
+        h1 a {
+            color: #9f6; /* Match the lighter color of the gradient */
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        h1 a:hover {
+            color: #5a8; /* A darker shade of green */
         }
 
         #video-container {
@@ -50,33 +60,32 @@
 
         #interactive-section p {
             font-size: 1.2em;
-            color: #f06;
+            color: #9f6; /* Match the lighter color of the gradient */
         }
 
-        #interactive-section img {
-            width: 100px;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
+        #interactive-section a {
+            color: #9f6; /* Match the lighter color of the gradient */
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
         }
 
-        #interactive-section img:hover {
-            transform: scale(1.1);
+        #interactive-section a:hover {
+            color: #5a8; /* A darker shade of green */
         }
     </style>
 </head>
 <body>
     <!-- Headline -->
-    <h1>Professor Kaoss</h1>
+    <h1><a href="https://youtube.com/@Professor-kaoss?si=B3oAStpak1nE1h0m" target="_blank">Professor Kaoss</a></h1>
 
     <!-- Container for YouTube Video Player -->
     <div id="video-container"></div>
 
     <!-- Interactive Section -->
     <div id="interactive-section">
-        <p>Explore more of Kaoss Music:</p>
-        <a href="https://myfavoritebooks.neocities.org/" target="_blank">
-            <img src="path/to/book-icon.png" alt="Explore Kaoss Music">
-        </a>
+        <p>Here are some of my favorite books:</p>
+        <!-- Link to your favorite books -->
+        <a href="https://myfavoritebooks.neocities.org/" target="_blank">Explore Kaoss's Bookshelf</a>
     </div>
 
     <!-- JavaScript to Load YouTube Playlist -->
