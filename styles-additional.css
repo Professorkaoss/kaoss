@@ -1,37 +1,36 @@
-/* styles-additional.css */
+/* styles-geometric.css */
 
-/* Additional styles for the headline */
-h1 {
-    color: #ffcc00; /* Yellow color for the headline */
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); /* Shadow for the text */
+/* Background container for geometric patterns */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind other elements */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
 }
 
-/* Additional styles for the biography section */
-#bio-section {
-    background-color: #333; /* Dark background color */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Light shadow */
+/* Diagonal lines pattern */
+body::before {
+    background: linear-gradient(45deg, #00ffcc 25%, transparent 25%, transparent 75%, #00ffcc 75%, #00ffcc);
+    background-size: 20px 20px; /* Adjust the size of the pattern */
 }
 
-#bio-section p {
-    color: #fff; /* White text color */
-    line-height: 1.6; /* Adjusted line height for readability */
+/* Circles pattern */
+body::before {
+    background: radial-gradient(circle at 20% 50%, #ffcc00 15%, transparent 15%),
+                radial-gradient(circle at 80% 50%, #ffcc00 15%, transparent 15%);
+    background-size: 30px 30px; /* Adjust the size of the circles */
 }
 
-/* Additional styles for the video container */
-#video-container {
-    filter: contrast(120%) brightness(90%); /* Adjusted brightness and contrast */
+/* Triangles pattern */
+body::before {
+    background: repeating-linear-gradient(60deg, #0099ff, #0099ff 10px, #333 10px, #333 20px);
 }
 
-/* Additional styles for the interactive section */
-#interactive-section {
-    background-color: #ffcc00; /* Yellow background color */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Light shadow */
-}
-
-#interactive-section a {
-    font-weight: bold; /* Bold text for links */
+/* Custom pattern - adjust as needed */
+body::before {
+    background: repeating-linear-gradient(-45deg, #ffcc00, #ffcc00 20px, #333 20px, #333 40px);
 }
