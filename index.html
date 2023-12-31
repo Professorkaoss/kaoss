@@ -100,9 +100,61 @@
         <a href="https://myfavoritebooks.neocities.org/" target="_blank">Explore Kaoss's Bookshelf</a>
         <p>* Website created with the help of ChatGPT</p>
     </div>
+         <!-- JavaScript to Load YouTube Playlist -->
+<script>
+    // Your YouTube Playlist ID
+    const playlistId = "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl";
 
+    // Function to create YouTube embed iframe
+    function createYouTubePlayer() {
+        const iframe = document.createElement("iframe");
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&modestbranding=1&showinfo=0&controls=0&disablekb=1`;
+        iframe.frameBorder = "0";
+        iframe.allowFullscreen = true;
+        return iframe;
+    }
+
+    // Function to load YouTube playlist
+    function loadPlaylist() {
+        const videoContainer = document.getElementById("video-container");
+        const videoPlayer = createYouTubePlayer();
+        videoContainer.appendChild(videoPlayer);
+    }
+
+    // Load the YouTube API and playlist when the page loads
+    function onYouTubeIframeAPIReady() {
+        loadPlaylist();
+    }
     <!-- JavaScript to Load YouTube Playlist -->
-    <script>
+<script>
+    // Your YouTube Playlist ID
+    const playlistId = "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl";
+
+    // Function to create YouTube embed iframe
+    function createYouTubePlayer() {
+        const iframe = document.createElement("iframe");
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&modestbranding=1&showinfo=0&controls=0&disablekb=1`;
+        iframe.frameBorder = "0";
+        iframe.allowFullscreen = true;
+        return iframe;
+    }
+
+    // Function to load YouTube playlist
+    function loadPlaylist() {
+        const videoContainer = document.getElementById("video-container");
+        const videoPlayer = createYouTubePlayer();
+        videoContainer.appendChild(videoPlayer);
+    }
+
+    // Load the YouTube API and playlist when the page loads
+    function onYouTubeIframeAPIReady() {
+        loadPlaylist();
+    }
+</script>
         // Your YouTube Playlist ID
         const playlistId = "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl";
 
