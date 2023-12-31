@@ -1,36 +1,35 @@
-/* styles-geometric.css */
+/* styles.css */
 
-/* Background container for psychedelic wave pattern */
-body::before {
-    content: "";
+/* Rest of your existing styles */
+
+/* Container for the portrait */
+#portrait-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: -1;
-    pointer-events: none;
 }
 
-/* Psychedelic wave pattern with increased transparency */
-body::before {
-    background: repeating-radial-gradient(
-        circle,
-        rgba(0, 255, 204, 0.2) 0%, /* Adjust alpha value for transparency */
-        rgba(0, 255, 204, 0.2) 10%,
-        rgba(255, 204, 0, 0.2) 10%, /* Adjust alpha value for transparency */
-        rgba(255, 204, 0, 0.2) 20%
-    );
-    background-size: 500% 500%;
-    animation: waveAnimation 10s infinite linear;
+/* Stylized portrait using gradients and shapes */
+#portrait {
+    width: 150px;
+    height: 200px;
+    background: radial-gradient(circle, #ffcc00, #2a2a72);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Animation keyframes for the wave effect */
-@keyframes waveAnimation {
-    from {
-        background-position: 0% 0%;
-    }
-    to {
-        background-position: 100% 100%;
-    }
+/* Wrinkles using additional shapes */
+#wrinkles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 140px;
+    background: linear-gradient(90deg, #fff 50%, transparent 50%),
+                linear-gradient(180deg, #fff 50%, transparent 50%);
+    background-size: 2px 10px;
+    background-position: 0 0, 10px 0;
 }
