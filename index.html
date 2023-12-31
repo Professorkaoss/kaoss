@@ -32,13 +32,11 @@
             color: #f06; /* Reverted to the original color */
             text-decoration: none;
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-            animation: pulse 2s infinite; /* Add pulsing animation */
         }
 
         a:hover {
             color: #9f6; /* A lighter shade of green */
-            transform: scale(1.1); /* Add additional scaling on hover */
-            animation: none; /* Stop pulsing animation on hover */
+            transform: scale(1.1); /* Add pulsing animation on hover */
         }
 
         #video-container {
@@ -59,13 +57,11 @@
             color: #9f6; /* A lighter shade of green */
             text-decoration: underline; /* Underline for links */
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-            animation: pulse 2s infinite; /* Add pulsing animation */
         }
 
         #interactive-section a:hover {
             color: #5a8; /* A darker shade of green */
-            transform: scale(1.1); /* Add additional scaling on hover */
-            animation: none; /* Stop pulsing animation on hover */
+            transform: scale(1.1); /* Add pulsing animation on hover */
         }
 
         @keyframes pulse {
@@ -90,11 +86,15 @@
 
     <!-- JavaScript to Load YouTube Playlist -->
     <script>
-        // Your YouTube Playlist ID
-        const playlistId = "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl";
+        // Your YouTube Playlist IDs
+        const playlistIds = [
+            "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl",
+            "PLonQTLNbidOMo22pdO9Kl4Q11BxBfVTW2",
+            "PLonQTLNbidOMNNl2VGNDSrgMzufQKktsS"
+        ];
 
         // Function to create YouTube embed iframe
-        function createYouTubePlayer() {
+        function createYouTubePlayer(playlistId) {
             const iframe = document.createElement("iframe");
             iframe.width = "100%";
             iframe.height = "315";
@@ -107,8 +107,12 @@
         // Function to load YouTube playlist
         function loadPlaylist() {
             const videoContainer = document.getElementById("video-container");
-            const videoPlayer = createYouTubePlayer();
-            videoContainer.appendChild(videoPlayer);
+
+            // Load each playlist sequentially
+            playlistIds.forEach(playlistId => {
+                const videoPlayer = createYouTubePlayer(playlistId);
+                videoContainer.appendChild(videoPlayer);
+            });
         }
 
         // Load the YouTube API and playlist when the page loads
