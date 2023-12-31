@@ -32,11 +32,13 @@
             color: #f06; /* Reverted to the original color */
             text-decoration: none;
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            animation: pulse 2s infinite; /* Add pulsing animation */
         }
 
         a:hover {
             color: #9f6; /* A lighter shade of green */
-            transform: scale(1.1); /* Add pulsing animation on hover */
+            transform: scale(1.1); /* Add additional scaling on hover */
+            animation: none; /* Stop pulsing animation on hover */
         }
 
         #video-container {
@@ -57,11 +59,19 @@
             color: #9f6; /* A lighter shade of green */
             text-decoration: underline; /* Underline for links */
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            animation: pulse 2s infinite; /* Add pulsing animation */
         }
 
         #interactive-section a:hover {
             color: #5a8; /* A darker shade of green */
-            transform: scale(1.1); /* Add pulsing animation on hover */
+            transform: scale(1.1); /* Add additional scaling on hover */
+            animation: none; /* Stop pulsing animation on hover */
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
