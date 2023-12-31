@@ -1,0 +1,37 @@
+/* styles-additional.css */
+
+/* Additional styles for the headline */
+h1 {
+    color: #ffcc00; /* Yellow color for the headline */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); /* Shadow for the text */
+}
+
+/* Additional styles for the biography section */
+#bio-section {
+    background-color: #333; /* Dark background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Light shadow */
+}
+
+#bio-section p {
+    color: #fff; /* White text color */
+    line-height: 1.6; /* Adjusted line height for readability */
+}
+
+/* Additional styles for the video container */
+#video-container {
+    filter: contrast(120%) brightness(90%); /* Adjusted brightness and contrast */
+}
+
+/* Additional styles for the interactive section */
+#interactive-section {
+    background-color: #ffcc00; /* Yellow background color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Light shadow */
+}
+
+#interactive-section a {
+    font-weight: bold; /* Bold text for links */
+}
