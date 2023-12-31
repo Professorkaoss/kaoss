@@ -103,7 +103,7 @@
 
     <!-- Container for YouTube Video Player -->
     <div id="video-container">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&cache=${Date.now()}" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!-- Interactive Section -->
@@ -123,7 +123,7 @@
             const iframe = document.createElement("iframe");
             iframe.width = "100%";
             iframe.height = "100%";
-            iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&cache=${Date.now()}`;
+            iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&modestbranding=1&showinfo=0&cache=${Date.now()}`;
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
             return iframe;
