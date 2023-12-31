@@ -55,7 +55,7 @@
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
             border-radius: 10px;
             overflow: hidden;
-            margin-bottom: 20px;
+            margin: 20px 0;
 
             /* Trippy styles */
             filter: brightness(120%) saturate(120%);
@@ -76,14 +76,6 @@
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         }
 
-        #bio-section {
-            margin: 20px 0;
-            text-align: center;
-
-            /* Trippy styles */
-            filter: invert(1);
-        }
-
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.1); }
@@ -92,16 +84,15 @@
     </style>
 </head>
 <body>
-    <!-- Biography Section -->
-    <div id="bio-section">
-        <h2>Biography</h2>
-        <p>Welcome to the whimsical world of Professor Kaoss, a creative mind fueled by a passion for crafting the trippiest content imaginable. Inspired by the surreal wonders of Adult Swim's "Off the Air" and the mesmerizing realms of psychedelia, Professor Kaoss sets out to bend reality and synchronize beats with cosmic pulses.</p>
-        <p>Embark on a journey where sonic alchemy meets visual wizardry, painting vibrant landscapes of sound and color. In this kaleidoscopic adventure, ordinary boundaries blur into the extraordinary.</p>
-        <p>Join the experience, where every note is a brushstroke, creating a canvas of consciousness. And remember, this entire journey was woven with the help of ChatGPT, a digital companion in the quest for creativity.</p>
-    </div>
-
     <!-- Headline -->
     <h1><a href="https://youtube.com/@Professor-kaoss?si=B3oAStpak1nE1h0m" target="_blank">Professor Kaoss</a></h1>
+
+    <!-- Biography Section -->
+    <div id="bio-section">
+        <p>Welcome to the whimsical world of Professor Kaoss, a creative mind fueled by a passion for crafting the trippiest content imaginable. Inspired by the surreal wonders of Adult Swim's "Off the Air" and the mesmerizing realms of psychedelia, Professor Kaoss sets out to bend reality and synchronize beats with cosmic pulses.</p>
+        <p>Embark on a journey where sonic alchemy meets visual wizardry, painting vibrant landscapes of sound and color. In this kaleidoscopic adventure, ordinary boundaries blur into the extraordinary.</p>
+        <p>Join the experience, where every note is a brushstroke, creating a canvas of consciousness.</p>
+    </div>
 
     <!-- Container for YouTube Video Player -->
     <div id="video-container"></div>
@@ -110,6 +101,7 @@
     <div id="interactive-section">
         <!-- Link to your favorite books -->
         <a href="https://myfavoritebooks.neocities.org/" target="_blank">Explore Kaoss's Bookshelf</a>
+        <p>* Website created with the help of ChatGPT</p>
     </div>
 
     <!-- JavaScript to Load YouTube Playlist -->
