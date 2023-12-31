@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Music Website</title>
+    <title>Kaoss site</title>
     <!-- Add YouTube Player API script -->
     <script src="https://www.youtube.com/iframe_api"></script>
     <!-- Add CSS Styles -->
     <style>
         body {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
@@ -17,6 +18,12 @@
             background: linear-gradient(45deg, #f06, #9f6);
             color: #fff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-family: 'Fontdiner Swanky', cursive; /* Change to your preferred psychedelic font */
         }
 
         #video-container {
@@ -35,6 +42,9 @@
     </style>
 </head>
 <body>
+    <!-- Headline -->
+    <h1>Professor Kaoss</h1>
+
     <!-- Container for YouTube Video Player -->
     <div id="video-container"></div>
 
@@ -48,11 +58,11 @@
         ];
 
         // Function to create YouTube embed iframe
-        function createYouTubePlayer(videoId) {
+        function createYouTubePlayer(playlistId) {
             const iframe = document.createElement("iframe");
             iframe.width = "100%";
             iframe.height = "315";
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1`;
+            iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1`;
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
             return iframe;
@@ -62,11 +72,9 @@
         function loadPlaylist() {
             const videoContainer = document.getElementById("video-container");
 
-            // Create YouTube Player for each playlist
-            playlistIds.forEach(playlistId => {
-                const videoPlayer = createYouTubePlayer(playlistId);
-                videoContainer.appendChild(videoPlayer);
-            });
+            // Create YouTube Player for the first playlist
+            const videoPlayer = createYouTubePlayer(playlistIds[0]);
+            videoContainer.appendChild(videoPlayer);
         }
 
         // Load the YouTube API and playlist when the page loads
@@ -75,4 +83,4 @@
         }
     </script>
 </body>
-  </html>
+</html>
