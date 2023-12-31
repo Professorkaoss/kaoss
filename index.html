@@ -53,7 +53,8 @@
             border-radius: 10px;
             overflow: hidden;
             margin: 20px 0;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            /* Reverted to the previous height setting */
+            height: 315px;
             /* Trippy styles */
             filter: brightness(120%) saturate(120%);
         }
@@ -85,7 +86,6 @@
     <div id="bio-section">
         <p>Welcome to the whimsical world of Professor Kaoss, a creative mind fueled by a passion for crafting the trippiest content imaginable. Inspired by the surreal wonders of Adult Swim's "Off the Air" and the mesmerizing realms of psychedelia, Professor Kaoss sets out to bend reality and synchronize beats with cosmic pulses.</p>
         <p>Embark on a journey where sonic alchemy meets visual wizardry, painting vibrant landscapes of sound and color. In this kaleidoscopic adventure, ordinary boundaries blur into the extraordinary.</p>
-        <!-- Removed some content to improve scrolling -->
         <p>Join the experience, where every note is a brushstroke, creating a canvas of consciousness.</p>
     </div>
 
@@ -111,7 +111,7 @@
             const iframe = document.createElement("iframe");
             iframe.width = "100%";
             iframe.height = "100%";
-            iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&modestbranding=1&showinfo=0&cache=${Date.now()}`;
+            iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlist Id}&autoplay=1&modestbranding=1&showinfo=0&cache=${Date.now()}`;
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
             return iframe;
