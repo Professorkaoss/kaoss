@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaoss site</title>
+    <title>Kaoss Music</title>
     <!-- Add YouTube Player API script -->
     <script src="https://www.youtube.com/iframe_api"></script>
     <!-- Add CSS Styles -->
@@ -16,12 +16,12 @@
             height: 100vh;
             margin: 0;
             background: linear-gradient(45deg, #f06, #9f6);
-            color: #fff;
+            color: #f06; /* Match the darker color of the gradient */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         h1 {
-            font-size: 2em;
+            font-size: 3em; /* Larger font size */
             margin-bottom: 20px;
             font-family: 'Fontdiner Swanky', cursive; /* Change to your preferred psychedelic font */
         }
@@ -50,15 +50,11 @@
 
     <!-- JavaScript to Load YouTube Playlist -->
     <script>
-        // Your YouTube Playlist IDs
-        const playlistIds = [
-            "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl",
-            "PLonQTLNbidOMo22pdO9Kl4Q11BxBfVTW2",
-            "PLonQTLNbidOMNNl2VGNDSrgMzufQKktsS"
-        ];
+        // Your YouTube Playlist ID
+        const playlistId = "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl";
 
         // Function to create YouTube embed iframe
-        function createYouTubePlayer(playlistId) {
+        function createYouTubePlayer() {
             const iframe = document.createElement("iframe");
             iframe.width = "100%";
             iframe.height = "315";
@@ -72,8 +68,8 @@
         function loadPlaylist() {
             const videoContainer = document.getElementById("video-container");
 
-            // Create YouTube Player for the first playlist
-            const videoPlayer = createYouTubePlayer(playlistIds[0]);
+            // Create YouTube Player for the playlist
+            const videoPlayer = createYouTubePlayer();
             videoContainer.appendChild(videoPlayer);
         }
 
