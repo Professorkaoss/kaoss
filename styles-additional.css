@@ -1,6 +1,6 @@
 /* styles.css */
 
-/* Rest of your existing styles */
+/* ... existing styles ... */
 
 /* Container for the portrait */
 #portrait-container {
@@ -15,9 +15,10 @@
 #portrait {
     width: 150px;
     height: 200px;
-    background: radial-gradient(circle, #ffcc00, #2a2a72);
+    background: conic-gradient(from 180deg at 50% 50%, #ffcc00 0%, #2a2a72 25%, #00ffcc 50%, #ffcc00 75%, #2a2a72 100%);
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 /* Wrinkles using additional shapes */
