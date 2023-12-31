@@ -15,11 +15,13 @@
             justify-content: space-between;
             min-height: 100vh;
             margin: 0;
-            background: linear-gradient(45deg, #7d1eaf, #330867); /* Purple gradient */
+            background: linear-gradient(45deg, #2a2a72, #009ffd); /* Blue gradient */
             color: #fff;
             font-family: 'Roboto', sans-serif;
             overflow: hidden;
-
+            overflow-y: scroll; /* Added scrolling */
+            overscroll-behavior: none; /* Prevent page overscroll */
+            scroll-behavior: smooth; /* Smooth scrolling */
             /* Trippy styles */
             filter: hue-rotate(180deg) saturate(200%) contrast(90%);
         }
@@ -29,7 +31,6 @@
             margin: 20px 0;
             font-family: 'Great Vibes', cursive;
             text-decoration: underline;
-
             /* Trippy styles */
             text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
         }
@@ -53,7 +54,6 @@
             overflow: hidden;
             margin: 20px 0;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
-
             /* Trippy styles */
             filter: brightness(120%) saturate(120%);
         }
@@ -85,6 +85,7 @@
     <div id="bio-section">
         <p>Welcome to the whimsical world of Professor Kaoss, a creative mind fueled by a passion for crafting the trippiest content imaginable. Inspired by the surreal wonders of Adult Swim's "Off the Air" and the mesmerizing realms of psychedelia, Professor Kaoss sets out to bend reality and synchronize beats with cosmic pulses.</p>
         <p>Embark on a journey where sonic alchemy meets visual wizardry, painting vibrant landscapes of sound and color. In this kaleidoscopic adventure, ordinary boundaries blur into the extraordinary.</p>
+        <!-- Removed some content to improve scrolling -->
         <p>Join the experience, where every note is a brushstroke, creating a canvas of consciousness.</p>
     </div>
 
