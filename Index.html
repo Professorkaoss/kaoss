@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Music Website</title>
+    <!-- Add YouTube Player API script -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Add CSS Styles -->
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #f06, #9f6);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #video-container {
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Add some animation to the video container */
+        #video-container:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for YouTube Video Player -->
+    <div id="video-container"></div>
+
+    <!-- JavaScript to Load YouTube Playlist -->
+    <script>
+        // Your YouTube Playlist IDs
+        const playlistIds = [
+            "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl",
+            "PLonQTLNbidOMo22pdO9Kl4Q11BxBfVTW2",
+            "PLonQTLNbidOMNNl2VGNDSrgMzufQKktsS"
+        ];
+
+        // Function to create YouTube embed iframe
+        function createYouTubePlayer(videoId) {
+            const iframe = document.createElement("iframe");
+            iframe.width = "100%";
+            iframe.height = "315";
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1`;
+            iframe.frameBorder = "0";
+            iframe.allowFullscreen = true;
+            return iframe;
+        }
+
+        // Function to load YouTube playlist
+        function loadPlaylist() {
+            const videoContainer = document.getElementById("video-container");
+
+            // Create YouTube Player for each playlist
+            playlistIds.forEach(playlistId => {
+                const videoPlayer = createYouTubePlayer(playlistId);
+                videoContainer.appendChild(videoPlayer);
+            });
+        }
+
+        // Load the YouTube API and playlist when the page loads
+        function onYouTubeIframeAPIReady() {
+            loadPlaylist();
+        }
+    </script>
+</body>
+  </html>
