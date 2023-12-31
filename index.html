@@ -25,7 +25,7 @@
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 20px 0;
             font-family: 'Great Vibes', cursive;
             text-decoration: underline;
@@ -54,6 +54,7 @@
             border-radius: 10px;
             overflow: hidden;
             margin: 20px 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
 
             /* Trippy styles */
             filter: brightness(120%) saturate(120%);
@@ -101,7 +102,9 @@
     </div>
 
     <!-- Container for YouTube Video Player -->
-    <div id="video-container"></div>
+    <div id="video-container">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&cache=${Date.now()}" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <!-- Interactive Section -->
     <div id="interactive-section">
@@ -119,7 +122,7 @@
         function createYouTubePlayer() {
             const iframe = document.createElement("iframe");
             iframe.width = "100%";
-            iframe.height = "315";
+            iframe.height = "100%";
             iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&cache=${Date.now()}`;
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
