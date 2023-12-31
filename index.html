@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaoss Music</title>
+    <title>Professor Kaoss - Music</title>
     <!-- Add YouTube Player API script -->
     <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Quicksand:wght@500&family=Great+Vibes&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <!-- Add CSS Styles -->
     <style>
         body {
@@ -15,34 +17,36 @@
             justify-content: space-between;
             min-height: 100vh;
             margin: 0;
-            background: linear-gradient(45deg, #f06, #9f6);
-            color: #f06; /* Reverted to the original color */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #2a2a72, #009ffd);
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
             overflow: hidden;
         }
 
         h1 {
             font-size: 3em;
-            margin: 20px 0; /* Adjusted margin */
-            font-family: 'Fontdiner Swanky', cursive;
-            text-decoration: underline; /* Underline for links */
+            margin: 20px 0;
+            font-family: 'Great Vibes', cursive;
+            text-decoration: underline;
         }
 
         a {
-            color: #f06; /* Reverted to the original color */
+            color: #fff;
             text-decoration: none;
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            animation: pulse 2s infinite;
         }
 
         a:hover {
-            color: #9f6; /* A lighter shade of green */
-            transform: scale(1.1); /* Add pulsing animation on hover */
+            color: #00ffcc;
+            transform: scale(1.1);
+            animation: none;
         }
 
         #video-container {
             width: 80%;
             max-width: 800px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 20px;
@@ -50,18 +54,25 @@
 
         #interactive-section {
             text-align: center;
-            margin-bottom: 20px; /* Adjusted margin */
+            margin-bottom: 20px;
         }
 
         #interactive-section a {
-            color: #9f6; /* A lighter shade of green */
-            text-decoration: underline; /* Underline for links */
+            color: #00ffcc;
+            text-decoration: underline;
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            animation: pulse 2s infinite;
         }
 
         #interactive-section a:hover {
-            color: #5a8; /* A darker shade of green */
-            transform: scale(1.1); /* Add pulsing animation on hover */
+            color: #ffcc00;
+            transform: scale(1.1);
+            animation: none;
+        }
+
+        #bio-section {
+            margin: 20px 0;
+            text-align: center;
         }
 
         @keyframes pulse {
@@ -84,17 +95,19 @@
         <a href="https://myfavoritebooks.neocities.org/" target="_blank">Explore Kaoss's Bookshelf</a>
     </div>
 
+    <!-- Biography Section (Placeholder) -->
+    <div id="bio-section">
+        <h2>Biography</h2>
+        <p>Coming soon...</p>
+    </div>
+
     <!-- JavaScript to Load YouTube Playlist -->
     <script>
-        // Your YouTube Playlist IDs
-        const playlistIds = [
-            "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl",
-            "PLonQTLNbidOMo22pdO9Kl4Q11BxBfVTW2",
-            "PLonQTLNbidOMNNl2VGNDSrgMzufQKktsS"
-        ];
+        // Your YouTube Playlist ID
+        const playlistId = "PLonQTLNbidONh09SiiJcZ97TxFEJz1oZl";
 
         // Function to create YouTube embed iframe
-        function createYouTubePlayer(playlistId) {
+        function createYouTubePlayer() {
             const iframe = document.createElement("iframe");
             iframe.width = "100%";
             iframe.height = "315";
@@ -107,12 +120,8 @@
         // Function to load YouTube playlist
         function loadPlaylist() {
             const videoContainer = document.getElementById("video-container");
-
-            // Load each playlist sequentially
-            playlistIds.forEach(playlistId => {
-                const videoPlayer = createYouTubePlayer(playlistId);
-                videoContainer.appendChild(videoPlayer);
-            });
+            const videoPlayer = createYouTubePlayer();
+            videoContainer.appendChild(videoPlayer);
         }
 
         // Load the YouTube API and playlist when the page loads
