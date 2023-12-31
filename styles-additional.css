@@ -1,6 +1,6 @@
 /* styles-geometric.css */
 
-/* Background container for geometric patterns */
+/* Background container for psychedelic wave pattern */
 body::before {
     content: "";
     position: fixed;
@@ -8,29 +8,29 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Place it behind other elements */
-    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+    z-index: -1;
+    pointer-events: none;
 }
 
-/* Diagonal lines pattern */
+/* Psychedelic wave pattern with increased transparency */
 body::before {
-    background: linear-gradient(45deg, #00ffcc 25%, transparent 25%, transparent 75%, #00ffcc 75%, #00ffcc);
-    background-size: 20px 20px; /* Adjust the size of the pattern */
+    background: repeating-radial-gradient(
+        circle,
+        rgba(0, 255, 204, 0.2) 0%, /* Adjust alpha value for transparency */
+        rgba(0, 255, 204, 0.2) 10%,
+        rgba(255, 204, 0, 0.2) 10%, /* Adjust alpha value for transparency */
+        rgba(255, 204, 0, 0.2) 20%
+    );
+    background-size: 500% 500%;
+    animation: waveAnimation 10s infinite linear;
 }
 
-/* Circles pattern */
-body::before {
-    background: radial-gradient(circle at 20% 50%, #ffcc00 15%, transparent 15%),
-                radial-gradient(circle at 80% 50%, #ffcc00 15%, transparent 15%);
-    background-size: 30px 30px; /* Adjust the size of the circles */
-}
-
-/* Triangles pattern */
-body::before {
-    background: repeating-linear-gradient(60deg, #0099ff, #0099ff 10px, #333 10px, #333 20px);
-}
-
-/* Custom pattern - adjust as needed */
-body::before {
-    background: repeating-linear-gradient(-45deg, #ffcc00, #ffcc00 20px, #333 20px, #333 40px);
+/* Animation keyframes for the wave effect */
+@keyframes waveAnimation {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
 }
