@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professor Kaoss - Music</title>
-    <!-- Add YouTube Player API script -->
-    <script src="https://www.youtube.com/iframe_api"></script>
     <!-- Add Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Quicksand:wght@500&family=Great+Vibes&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <!-- Add CSS Styles -->
@@ -76,6 +74,14 @@
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
         }
 
+        #bio-section {
+            margin: 20px 0;
+            text-align: center;
+
+            /* Trippy styles */
+            filter: invert(1);
+        }
+
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.1); }
@@ -114,7 +120,7 @@
             const iframe = document.createElement("iframe");
             iframe.width = "100%";
             iframe.height = "315";
-            iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1`;
+            iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1&cache=${Date.now()}`;
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
             return iframe;
